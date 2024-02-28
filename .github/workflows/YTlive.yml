@@ -52,16 +52,6 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=C6gYqSHLRw4)
         EOL
 
-    - name: Get 民視新聞.m3u8
-      run: |
-        touch ./民視新聞.m3u8
-        sudo cat >./民視新聞.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
-        EOL
-
     - name: Get 東森財經新聞.m3u8
       run: |
         touch ./東森財經新聞.m3u8
@@ -79,7 +69,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=S5WOGu2HSes)
+        $(yt-dlp -g https://www.youtube.com/watch?v=E0zhe2gkXBs)
         EOL
 
     - name: Get 中天新聞.m3u8
@@ -102,20 +92,20 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
         EOL
 
-    # - name: Get 三立海外直播.m3u8
-    #   run: |
-    #     touch ./三立海外直播.m3u8
-    #     sudo cat >./三立海外直播.m3u8 <<EOL
-    #     #EXTM3U
-    #     #EXT-X-VERSION:3
-    #     #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-    #     $(yt-dlp -g https://www.youtube.com/watch?v=jlldIiGA5bU)
-    #     EOL
-
-    - name: Get 三立新闻台.m3u8
+    - name: Get 三立新闻+.m3u8
       run: |
-        touch ./三立新闻台.m3u8
-        sudo cat >./三立新闻台.m3u8 <<EOL
+        touch ./SETNews+.m3u8
+        sudo cat >./SETNews+.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
+        EOL
+
+    - name: Get 三立新闻.m3u8
+      run: |
+        touch ./SETiNews.m3u8
+        sudo cat >./SETiNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -283,7 +273,6 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=LEOat38Iuao)
         EOL
 
-
     - name: Get 東森購物46台.m3u8
       run: |
         touch ./東森購物46台.m3u8
@@ -413,8 +402,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g https://www.youtube.com/channel/UCdpxNQgqL3276yjrK03gMXA/live)
-        EOL                
-
+        EOL
 
     - name: Get 民視.m3u8
       run: |
