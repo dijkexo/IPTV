@@ -162,15 +162,15 @@ jobs:
     #     $(yt-dlp -g http://www.youtube.com/channel/UCh3S2zaqmyQX2dMwpi63zSA/live)
     #     EOL
 
-    - name: Get KPOP.m3u8
-      run: |
-        touch ./KPOP.m3u8
-        sudo cat >./KPOP.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live)
-        EOL
+    # - name: Get KPOP.m3u8
+    #   run: |
+    #     touch ./KPOP.m3u8
+    #     sudo cat >./KPOP.m3u8 <<EOL
+    #     #EXTM3U
+    #     #EXT-X-VERSION:3
+    #     #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+    #     $(yt-dlp -g https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live)
+    #     EOL
 
     - name: Get 大愛一台.m3u8
       run: |
@@ -202,64 +202,34 @@ jobs:
     #     $(yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
     #     EOL
 
-    - name: Get MOMO購物一台.m3u8
+    - name: Get 德國之聲新聞.m3u8
       run: |
-        touch ./MOMO購物一台.m3u8
-        sudo cat >./MOMO購物一台.m3u8 <<EOL
+        touch ./DWNews.m3u8
+        sudo cat >./DWNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=_pZQ1Lk0xMA)
+        $(yt-dlp -g https://www.youtube.com/watch?v=pqabxBKzZ6M)
         EOL
 
-    - name: Get MOMO購物二台.m3u8
+    - name: Get FoxNews.m3u8
       run: |
-        touch ./MOMO購物二台.m3u8
-        sudo cat >./MOMO購物二台.m3u8 <<EOL
+        touch ./FoxNews.m3u8
+        sudo cat >./FoxNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=xbNWkUyxQGM)
+        $(yt-dlp -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
         EOL
 
-    - name: Get 美好購物1台.m3u8
+    - name: Get BloombergNews.m3u8
       run: |
-        touch ./美好購物1台.m3u8
-        sudo cat >./美好購物1台.m3u8 <<EOL
+        touch ./BloombergNews.m3u8
+        sudo cat >./BloombergNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=yuhgIlXwPh8)
-        EOL
-
-    - name: Get 美好購物2台.m3u8
-      run: |
-        touch ./美好購物2台.m3u8
-        sudo cat >./美好購物2台.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=LEOat38Iuao)
-        EOL
-
-    - name: Get 東森購物46台.m3u8
-      run: |
-        touch ./東森購物46台.m3u8
-        sudo cat >./東森購物46台.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=Z50JFuNgvB0)
-        EOL
-
-    - name: Get 東森購物60台.m3u8
-      run: |
-        touch ./東森購物60台.m3u8
-        sudo cat >./東森購物60台.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=u0NYyH3ZesE)
+        $(yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         EOL
 
     # - name: Get 以家人之名.m3u8
