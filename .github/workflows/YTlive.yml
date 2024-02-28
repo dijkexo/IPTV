@@ -14,8 +14,8 @@ jobs:
 
     - name: Get 中視新聞.m3u8
       run: |
-        touch ./中視新聞.m3u8
-        sudo cat >./中視新聞.m3u8 <<EOL
+        touch ./CTVNews.m3u8
+        sudo cat >./CTVNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -24,8 +24,8 @@ jobs:
 
     - name: Get 台視新聞.m3u8
       run: |
-        touch ./台視新聞.m3u8
-        sudo cat >./台視新聞.m3u8 <<EOL
+        touch ./TTVNews.m3u8
+        sudo cat >./TTVNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -34,8 +34,8 @@ jobs:
 
     - name: Get 華視新聞.m3u8
       run: |
-        touch ./華視新聞.m3u8
-        sudo cat >./華視新聞.m3u8 <<EOL
+        touch ./CTSNews.m3u8
+        sudo cat >./CTSNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -54,8 +54,8 @@ jobs:
 
     - name: Get 東森財經新聞.m3u8
       run: |
-        touch ./東森財經新聞.m3u8
-        sudo cat >./東森財經新聞.m3u8 <<EOL
+        touch ./EBCFinancialNews.m3u8
+        sudo cat >./EBCFinancialNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -64,8 +64,8 @@ jobs:
 
     - name: Get 東森新聞.m3u8
       run: |
-        touch ./東森新聞.m3u8
-        sudo cat >./東森新聞.m3u8 <<EOL
+        touch ./EBCNews.m3u8
+        sudo cat >./EBCNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -92,17 +92,17 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
         EOL
 
-    - name: Get 三立新闻+.m3u8
+    - name: Get 三立News+.m3u8
       run: |
-        touch ./SETNews+.m3u8
-        sudo cat >./SETNews+.m3u8 <<EOL
+        touch ./SETNewsPlus.m3u8
+        sudo cat >./SETNewsPlus.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
         EOL
 
-    - name: Get 三立新闻.m3u8
+    - name: Get 三立iNews.m3u8
       run: |
         touch ./SETiNews.m3u8
         sudo cat >./SETiNews.m3u8 <<EOL
@@ -114,8 +114,8 @@ jobs:
 
     - name: Get TVBS新聞.m3u8
       run: |
-        touch ./TVBS新聞.m3u8
-        sudo cat >./TVBS新聞.m3u8 <<EOL
+        touch ./TVBSNews.m3u8
+        sudo cat >./TVBSNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -124,23 +124,13 @@ jobs:
 
     - name: Get 鏡新聞.m3u8
       run: |
-        touch ./鏡新聞.m3u8
-        sudo cat >./鏡新聞.m3u8 <<EOL
+        touch ./MNews.m3u8
+        sudo cat >./MNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g "https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live")
         EOL        
-
-    - name: Get 幸福空間居家台.m3u8
-      run: |
-        touch ./幸福空間居家台.m3u8
-        sudo cat >./幸福空間居家台.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/channel/UCoo-jAsJgM8z09ddlhcBlSA/live)
-        EOL
 
     - name: Get 東森幼幼台.m3u8
       run: |
@@ -182,30 +172,10 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/channel/UCoRXPcv8XK5fAplLbk9PTww/live)
         EOL
 
-    - name: Get Music24.m3u8
-      run: |
-        touch ./Music24.m3u8
-        sudo cat >./Music24.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/channel/UCcHWhgSsMBemnyLhg6GL1vA/live)
-        EOL
-
-    - name: Get 經典元宇宙直播.m3u8
-      run: |
-        touch ./經典元宇宙直播.m3u8
-        sudo cat >./經典元宇宙直播.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/channel/UCJCg4enuciH7IlFIBaJ_NEQ/live)
-        EOL
-
     - name: Get 大愛一台.m3u8
       run: |
-        touch ./大愛一台.m3u8
-        sudo cat >./大愛一台.m3u8 <<EOL
+        touch ./DaAi_1.m3u8
+        sudo cat >./DaAi_1.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -214,8 +184,8 @@ jobs:
 
     - name: Get 大愛二台.m3u8
       run: |
-        touch ./大愛二台.m3u8
-        sudo cat >./大愛二台.m3u8 <<EOL
+        touch ./DaAi_2.m3u8
+        sudo cat >./DaAi_2.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
@@ -251,7 +221,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g https://www.youtube.com/watch?v=xbNWkUyxQGM)
         EOL
-
 
     - name: Get 美好購物1台.m3u8
       run: |
@@ -292,7 +261,6 @@ jobs:
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g https://www.youtube.com/watch?v=u0NYyH3ZesE)
         EOL
-
 
     # - name: Get 以家人之名.m3u8
     #   run: |
