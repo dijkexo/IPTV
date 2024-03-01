@@ -62,20 +62,10 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         EOL
 
-    - name: Get 東森新聞_源1.m3u8
+    - name: Get 東森新聞.m3u8
       run: |
-        touch ./EBCNews_source1.m3u8
-        sudo cat >./EBCNews_source1.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=E0zhe2gkXBs)
-        EOL
-
-    - name: Get 東森新聞_源2.m3u8
-      run: |
-        touch ./EBCNews_source2.m3u8
-        sudo cat >./EBCNews_source2.m3u8 <<EOL
+        touch ./EBCNews.m3u8
+        sudo cat >./EBCNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
