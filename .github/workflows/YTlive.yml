@@ -12,6 +12,16 @@ jobs:
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
 
+    - name: Get 中視新聞.m3u8
+      run: |
+        touch ./CTVNews.m3u8
+        sudo cat >./CTVNews.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
+        EOL
+
     - name: Get 台視新聞.m3u8
       run: |
         touch ./TTVNews.m3u8
@@ -20,16 +30,6 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
-        EOL
-
-    - name: Get 華視新聞.m3u8
-      run: |
-        touch ./CTSNews.m3u8
-        sudo cat >./CTSNews.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=wM0g8EoUZ_E)
         EOL
 
     - name: Get 公共電視.m3u8
@@ -402,7 +402,7 @@ jobs:
         $(curl -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVTravel | awk -F\" '{print $6}' | sed 's/master/stream2/g')
         EOL
 
-    - name: Get 中視.m3u8
+    - name: Get 華視.m3u8
       run: |
         touch ./CTS.m3u8
         sudo cat >./CTS.m3u8 <<EOL
@@ -412,7 +412,7 @@ jobs:
         $(curl -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=CTS | awk -F\" '{print $6}' | sed 's/master/stream2/g')
         EOL
 
-    - name: Get 中視新聞.m3u8
+    - name: Get 華視新聞.m3u8
       run: |
         touch ./CTSNews.m3u8
         sudo cat >./CTSNews.m3u8 <<EOL
