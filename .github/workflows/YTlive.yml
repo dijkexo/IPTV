@@ -222,6 +222,16 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         EOL
 
+    - name: Get Arirang.m3u8
+      run: |
+        touch ./Arirang.m3u8
+        sudo cat >./Arirang.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
+        EOL
+
     # - name: Get 以家人之名.m3u8
     #   run: |
     #     touch ./以家人之名.m3u8
