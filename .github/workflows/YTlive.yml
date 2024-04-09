@@ -239,7 +239,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(curl -s http://www.jinjiang.tv/m2o/channel/channel_info.php?id=4 | sed 's/\\//g;s/"/\n/g' | grep 'http.*live')
+        $(curl -s http://www.jinjiang.tv/m2o/channel/channel_info.php?id=4 | sed 's#\\##g;s#"#\n#g' | grep 'http.*live')
         EOL
 
     # - name: Get 以家人之名.m3u8
