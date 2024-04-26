@@ -32,15 +32,15 @@ jobs:
         $(yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         EOL
 
-    - name: Get 公共電視.m3u8
-      run: |
-        touch ./公共電視.m3u8
-        sudo cat >./公共電視.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=C6gYqSHLRw4)
-        EOL
+    # - name: Get 公共電視.m3u8
+    #   run: |
+    #     touch ./公共電視.m3u8
+    #     sudo cat >./公共電視.m3u8 <<EOL
+    #     #EXTM3U
+    #     #EXT-X-VERSION:3
+    #     #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+    #     $(yt-dlp -g https://www.youtube.com/watch?v=C6gYqSHLRw4)
+    #     EOL
 
     - name: Get 東森財經新聞.m3u8
       run: |
@@ -59,27 +59,37 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=2dfAzcDf8Zg)
+        $(yt-dlp -g https://www.youtube.com/c/newsebc/live)
         EOL
 
-    - name: Get 中天新聞.m3u8
-      run: |
-        touch ./中天新聞.m3u8
-        sudo cat >./中天新聞.m3u8 <<EOL
-        #EXTM3U
-        #EXT-X-VERSION:3
-        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=oIgbl7t0S_w)
-        EOL
+    # - name: Get 中天新聞.m3u8
+    #   run: |
+    #     touch ./中天新聞.m3u8
+    #     sudo cat >./中天新聞.m3u8 <<EOL
+    #     #EXTM3U
+    #     #EXT-X-VERSION:3
+    #     #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+    #     $(yt-dlp -g https://www.youtube.com/watch?v=oIgbl7t0S_w)
+    #     EOL
 
     - name: Get 寰宇新聞.m3u8
       run: |
-        touch ./寰宇新聞.m3u8
-        sudo cat >./寰宇新聞.m3u8 <<EOL
+        touch ./GlobalNewsTV.m3u8
+        sudo cat >./GlobalNewsTV.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=B7Zp3d6xXWw)
+        $(yt-dlp -g https://www.youtube.com/watch?v=6IquAgfvYmc)
+        EOL
+
+    - name: Get 寰宇新聞台灣台.m3u8
+      run: |
+        touch ./GlobalNewsTVTW.m3u8
+        sudo cat >./GlobalNewsTVTW.m3u8 <<EOL
+        #EXTM3U
+        #EXT-X-VERSION:3
+        #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
+        $(yt-dlp -g https://www.youtube.com/watch?v=w87VGpgd90U)
         EOL
 
     - name: Get 三立News+.m3u8
@@ -124,8 +134,8 @@ jobs:
 
     - name: Get 東森幼幼台.m3u8
       run: |
-        touch ./東森幼幼台.m3u8
-        sudo cat >./東森幼幼台.m3u8 <<EOL
+        touch ./YOYOTVEBC.m3u8
+        sudo cat >./YOYOTVEBC.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
