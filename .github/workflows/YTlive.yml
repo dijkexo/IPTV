@@ -365,11 +365,13 @@ jobs:
     - name: Get 民視.m3u8
       run: |
         touch ./FTV.m3u8
+        var1=$(curl -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTV | awk -F\" '{print $6}')
+        var2=$(curl $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTV.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(curl -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTV | awk -F\" '{print $6}')
+        $(echo $var1 | sed "s/master/$var2/")
         EOL
 
     - name: Get 民視第一台.m3u8
