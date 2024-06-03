@@ -401,13 +401,11 @@ jobs:
     - name: Get 民視新聞台.m3u8
       run: |
         touch ./FTVNews.m3u8
-        var1=$(curl --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVNews | awk -F\" '{print $6}')
-        var2=$(curl --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTVNews.m3u8 <<EOL
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(echo $var1 | sed "s/master/$var2/")
+        $(yt-dlp -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
         EOL
 
     - name: Get 民視影劇台.m3u8
