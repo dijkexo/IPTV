@@ -22,7 +22,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
         EOL
 
     - name: Get 台視新聞.m3u8
@@ -32,7 +32,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         EOL
 
     - name: Get 民視新聞.m3u8
@@ -62,7 +62,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         EOL
 
     - name: Get 東森新聞.m3u8
@@ -72,7 +72,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/c/newsebc/live)
+        $(torsocks yt-dlp -g https://www.youtube.com/c/newsebc/live)
         EOL
 
     # - name: Get 中天新聞.m3u8
@@ -92,7 +92,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=6IquAgfvYmc)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=6IquAgfvYmc)
         EOL
 
     - name: Get 寰宇新聞台灣台.m3u8
@@ -102,7 +102,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=w87VGpgd90U)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=w87VGpgd90U)
         EOL
 
     - name: Get 三立News+.m3u8
@@ -112,7 +112,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
         EOL
 
     - name: Get 三立iNews.m3u8
@@ -122,7 +122,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=pF507BLtbqU)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=pF507BLtbqU)
         EOL
 
     - name: Get TVBS新聞.m3u8
@@ -132,7 +132,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
         EOL
 
     - name: Get 鏡新聞.m3u8
@@ -142,7 +142,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g "https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live")
+        $(torsocks yt-dlp -g "https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live")
         EOL
 
     - name: Get 東森幼幼台.m3u8
@@ -152,7 +152,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/c/yoyotvebc/live)
+        $(torsocks yt-dlp -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
 
     # - name: Get KPOPLive.m3u8
@@ -192,7 +192,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
         EOL
 
     - name: Get 大愛二台.m3u8
@@ -202,7 +202,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         EOL
 
     # - name: Get 大愛三台.m3u8
@@ -222,7 +222,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
         EOL
 
     - name: Get FoxNews.m3u8
@@ -232,7 +232,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
         EOL
 
     - name: Get BloombergNews.m3u8
@@ -242,7 +242,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         EOL
 
     - name: Get Arirang.m3u8
@@ -252,7 +252,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
+        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
         EOL
 
     - name: Get 晋江电视.m3u8
