@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+      PROXY: socks4://34.124.190.108:8080
     steps:
     - name: Install yt-dlp
       run: |
@@ -23,6 +24,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
         EOL
 
     - name: Get 台視新聞.m3u8
@@ -33,6 +35,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         EOL
 
     - name: Get 民視新聞.m3u8
@@ -43,6 +46,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
         EOL
 
     # - name: Get 公共電視.m3u8
@@ -63,6 +67,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         EOL
 
     - name: Get 東森新聞.m3u8
@@ -73,6 +78,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/c/newsebc/live)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/c/newsebc/live)
         EOL
 
     # - name: Get 中天新聞.m3u8
@@ -93,6 +99,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=6IquAgfvYmc)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=6IquAgfvYmc)
         EOL
 
     - name: Get 寰宇新聞台灣台.m3u8
@@ -103,6 +110,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=w87VGpgd90U)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=w87VGpgd90U)
         EOL
 
     - name: Get 三立News+.m3u8
@@ -113,6 +121,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
         EOL
 
     - name: Get 三立iNews.m3u8
@@ -123,6 +132,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=pF507BLtbqU)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=pF507BLtbqU)
         EOL
 
     - name: Get TVBS新聞.m3u8
@@ -133,6 +143,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
         EOL
 
     - name: Get 鏡新聞.m3u8
@@ -143,6 +154,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g "https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live")
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live)
         EOL
 
     - name: Get 東森幼幼台.m3u8
@@ -153,6 +165,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/c/yoyotvebc/live)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
 
     # - name: Get KPOPLive.m3u8
@@ -193,6 +206,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=MIqUplvSRWA)
         EOL
 
     - name: Get 大愛二台.m3u8
@@ -203,6 +217,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         EOL
 
     # - name: Get 大愛三台.m3u8
@@ -223,6 +238,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
         EOL
 
     - name: Get FoxNews.m3u8
@@ -233,6 +249,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
         EOL
 
     - name: Get BloombergNews.m3u8
@@ -243,6 +260,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         EOL
 
     - name: Get Arirang.m3u8
@@ -253,6 +271,7 @@ jobs:
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
         $(torsocks yt-dlp -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
         EOL
 
     - name: Get 晋江电视.m3u8
