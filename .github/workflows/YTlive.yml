@@ -8,13 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USER_AGENT: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
-      PROXY: socks4://34.124.190.108:8080
+      PROXY: socks4://23.19.244.109:1080
     steps:
     - name: Install yt-dlp
       run: |
         sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         sudo chmod a+rx /usr/local/bin/yt-dlp
-        sudo apt install tor
 
     - name: Get 中視新聞.m3u8
       run: |
@@ -23,7 +22,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=TCnaIE_SAtM)
         EOL
 
@@ -34,7 +32,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=xL0ch83RAK8)
         EOL
 
@@ -45,7 +42,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=ylYJSBUgaMA)
         EOL
 
@@ -66,7 +62,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=WHEPzbFA3hw)
         EOL
 
@@ -77,7 +72,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/c/newsebc/live)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/c/newsebc/live)
         EOL
 
@@ -98,7 +92,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=6IquAgfvYmc)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=6IquAgfvYmc)
         EOL
 
@@ -109,7 +102,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=w87VGpgd90U)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=w87VGpgd90U)
         EOL
 
@@ -120,7 +112,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
         EOL
 
@@ -131,7 +122,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=pF507BLtbqU)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=pF507BLtbqU)
         EOL
 
@@ -142,7 +132,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=m_dhMSvUCIc)
         EOL
 
@@ -153,7 +142,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g "https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live")
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/channel/UC4LjkybVKXCDlneVXlKAbmw/live)
         EOL
 
@@ -164,7 +152,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/c/yoyotvebc/live)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/c/yoyotvebc/live)
         EOL
 
@@ -205,7 +192,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=MIqUplvSRWA)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=MIqUplvSRWA)
         EOL
 
@@ -216,7 +202,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=DTNkEm6jaqQ)
         EOL
 
@@ -237,7 +222,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=tZT2MCYu6Zw)
         EOL
 
@@ -248,7 +232,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=YDfiTGGPYCk)
         EOL
 
@@ -259,7 +242,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=iyOq8DhaMYw)
         EOL
 
@@ -270,7 +252,6 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(torsocks yt-dlp -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
         $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=CJVBX7KI5nU)
         EOL
 
