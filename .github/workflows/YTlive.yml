@@ -378,7 +378,7 @@ jobs:
     - name: Get 民視.m3u8
       run: |
         touch ./FTV.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTV | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTV | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTV.m3u8 <<EOL
         #EXTM3U
@@ -390,7 +390,7 @@ jobs:
     - name: Get 民視第一台.m3u8
       run: |
         touch ./FMTV.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FMTV | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FMTV | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FMTV.m3u8 <<EOL
         #EXTM3U
@@ -402,7 +402,7 @@ jobs:
     - name: Get 民視台灣台.m3u8
       run: |
         touch ./FTTV.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTTV | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTTV | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTTV.m3u8 <<EOL
         #EXTM3U
@@ -414,7 +414,7 @@ jobs:
     - name: Get 民視新聞台.m3u8
       run: |
         touch ./FTVNews.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVNews | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVNews | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTVNews.m3u8 <<EOL
         #EXTM3U
@@ -426,7 +426,7 @@ jobs:
     - name: Get 民視影劇台.m3u8
       run: |
         touch ./FTVDrama.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVDrama | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVDrama | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTVDrama.m3u8 <<EOL
         #EXTM3U
@@ -438,7 +438,7 @@ jobs:
     - name: Get 民視綜藝台.m3u8
       run: |
         touch ./FTVVariety.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVVariety | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVVariety | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTVVariety.m3u8 <<EOL
         #EXTM3U
@@ -450,7 +450,7 @@ jobs:
     - name: Get 民視旅遊台.m3u8
       run: |
         touch ./FTVTravel.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVTravel | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=FTVTravel | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./FTVTravel.m3u8 <<EOL
         #EXTM3U
@@ -462,7 +462,7 @@ jobs:
     - name: Get 華視.m3u8
       run: |
         touch ./CTS.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=CTS | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=CTS | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./CTS.m3u8 <<EOL
         #EXTM3U
@@ -474,7 +474,7 @@ jobs:
     - name: Get 華視新聞.m3u8
       run: |
         touch ./CTSNews.m3u8
-        var1=$(curl -L -A "$USER_AGENT" -k https://app.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=CTSNews | awk -F\" '{print $6}')
+        var1=$(curl -L -A "$USER_AGENT" -k https://app301.4gtv.tv/Data/GetChannelURL_Mozai.ashx?ChannelName=CTSNews | awk -F\" '{print $6}')
         var2=$(curl -L -A "$USER_AGENT" $var1 | sed -n '8p' | awk -F\. '{print $1}')
         sudo cat >./CTSNews.m3u8 <<EOL
         #EXTM3U
