@@ -112,7 +112,7 @@ jobs:
         #EXTM3U
         #EXT-X-VERSION:3
         #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=2560000
-        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/watch?v=oZdzzvxTfUY)
+        $(yt-dlp --proxy "$PROXY" -g https://www.youtube.com/live/MV9mI0GChwo)
         EOL
 
     - name: Get 三立iNews.m3u8
